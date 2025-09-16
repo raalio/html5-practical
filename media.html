@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Media — Maritide Hotel</title>
+  <meta name="description" content="Hotel media: gallery images, ambient audio, and promotional video." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://example.com/html5-practical/media.html" />
+</head>
+<body>
+  <a href="#main">Skip to content</a>
+
+  <header>
+    <h1>Media Showcase</h1>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="media.html" aria-current="page">Media</a></li>
+        <li><a href="extras.html">Extras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <article>
+      <header>
+        <h2>Discover Maritide Hotel</h2>
+      </header>
+
+      <!-- Responsive Image -->
+      <section>
+        <h3>Hotel Lobby</h3>
+        <picture>
+          <source srcset="assets/images/hero-large.jpg" media="(min-width:1000px)">
+          <source srcset="assets/images/hero-medium.jpg" media="(min-width:600px)">
+          <img src="assets/images/hero-small.jpg" alt="Lobby view of CodeStay Hotel">
+        </picture>
+      </section>
+
+      <!-- Audio -->
+      <section>
+        <h3>Lobby Ambience</h3>
+        <audio controls>
+          <source src="assets/audio/lobby-ambience.mp3" type="audio/mpeg">
+        </audio>
+      </section>
+
+      <!-- Video -->
+      <section>
+        <h3>Hotel Tour</h3>
+        <video controls width="640" poster="assets/images/hero-large.jpg">
+          <source src="assets/video/hotel-tour.mp4" type="video/mp4">
+          <source src="assets/video/hotel-tour.webm" type="video/webm">
+          <track src="assets/captions/sample.vtt" kind="captions" srclang="en" label="English" default>
+        </video>
+      </section>
+
+      <footer>
+        <p>Media resources © <time datetime="2025">2025</time> Maritide Hotel.</p>
+      </footer>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; <time datetime="2025">2025</time> Maritide Hotel. All rights reserved.</p>
+  </footer>
+</body>
+</html>
