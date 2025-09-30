@@ -1,0 +1,86 @@
+
+:root {
+    /* Colors for LIGHT THEME (Default) */
+    --color-primary: #007bff; /* CodeStay Blue */
+    --color-secondary: #6c757d;
+    --color-text: #005600;
+    --color-background: #f8f9fa;
+    --color-surface: #ffffff; /* For cards/sections */
+
+    /* Spacing & Typography */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Arial', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Colors for DARK THEME (Overrides) */
+        --color-text: #e9ecef;
+        --color-background: #1e2124;
+        --color-surface: #2c3034;
+        --color-primary: #4ab2ff; /* Lighter blue for contrast */
+    }
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    max-width: 0%;
+}
+
+
+a[href="#main"] {
+    position: absolute;
+    left: -9999px;
+    padding: var(--space-md);
+    background: var(--color-primary);
+    color: var(--color-surface);
+    z-index: 1000;
+}
+
+a[href="#main"]:focus {
+    position: static;
+}
+
+
+a:focus, button:focus, input:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+
+
+@media (min-width: 768px) {
+    main {
+        /* Use a simple 2-column grid for the main content area */
+        display: grid;
+        grid-template-columns: 1fr 250px; /* One main column and a fixed sidebar column */
+        gap: var(--space-lg);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--space-lg);
+    }
+    
+    
+    aside {
+        grid-column: 2 / 3;
+        padding: var(--space-md);
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-secondary);
+    }
+    
+    article {
+        grid-column: 1 / 2;
+    }
+}
